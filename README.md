@@ -19,16 +19,26 @@ BACKEND_SERVERS=https://backend1.onrender.com,https://backend2.onrender.com
 
 ## File Structure
 ```
-project-root/
-│── src/
-│   ├── config.js
-│   ├── middlewares/
+/proxy
+│── /src
+│   ├── /middlewares     
 │   │   ├── auth.js
-│   ├── routes/
-│   │   ├── index.js
-│   ├── proxy.js
-│── .env
-│── package.json
+│   │   ├── ratelimiter.js
+│   │   ├── obfuscation.js
+│   │
+│   ├── /routes         
+│   │   ├── index.js     
+│   │
+│   ├── /utils 
+│   │   ├── loadBalancer.js 
+│   │   ├── encrypt.js    
+│   │
+│   ├── proxy.js        
+│   ├── config.js      
+│
+│── package.json         
+│── .env                  
+│── README.md             
 ```
 
 ## Running the Proxy Server
@@ -41,4 +51,5 @@ node src/proxy.js
 ## API Usage
 Clients must include the authentication header in their requests:
 ```sh
-curl -H "x-proxy-auth: your-secret-key" http://localhost:3003/
+curl -X GET "http://your-proxy-server.com/api/data" \
+     -H "x-proxy-auth: U8Y%qrnN5K+SZ!JD4MXI2z"
