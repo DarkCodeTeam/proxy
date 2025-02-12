@@ -42,7 +42,7 @@ ENCRYPTION_KEY=01234567890123456789012345678901
 │── README.md             
 ```
 ## Use in client
-```
+```javascript
 fetch("http://your-proxy-server.com/api/data", {
     method: "GET",
     headers: {
