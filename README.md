@@ -12,9 +12,10 @@ This project implements a **secure proxy firewall** that authenticates incoming 
 ## Configuration
 Create a `.env` file in the root directory and define the following variables:
 ```env
-PORT=3003
-PROXY_SECRET=your-secret-key
-BACKEND_SERVERS=https://backend1.onrender.com,https://backend2.onrender.com
+PORT=8000
+BACKEND_SERVERS=https://backend1.onrender.com,https://backend2.onrender.com,https://backend3.onrender.com,http://localhost:8000/
+PROXY_SECRET=U8Y%qrnN5K+SZ!JD4MXI2z
+ENCRYPTION_KEY=01234567890123456789012345678901
 ```
 
 ## File Structure
