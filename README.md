@@ -41,7 +41,24 @@ ENCRYPTION_KEY=01234567890123456789012345678901
 │── .env                  
 │── README.md             
 ```
+## Use in client
+```
+fetch("http://your-proxy-server.com/api/data", {
+    method: "GET",
+    headers: {
+        "x-proxy-auth": "U8Y%qrnN5K+SZ!JD4MXI2z",
+    }
+})
+.then(response => {
+    if (!response.ok) {
+        throw new Error("Access Denied");
+    }
+    return response.json();
+})
+.then(data => console.log(data))
+.catch(error => console.error("Error:", error));
 
+```
 ## Running the Proxy Server
 Install dependencies and start the server:
 ```sh
