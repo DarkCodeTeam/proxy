@@ -17,5 +17,5 @@ app.use(rateLimiterMiddleware);
 app.use('/', routes);
 
 app.listen(PORT, () => {
-    console.log(`🔰 Secure Proxy is running on port ${PORT}`);
+    console.log(` Secure Proxy is running on port ${PORT}`);
 });
